@@ -4,9 +4,10 @@ from keras.models import load_model
 st.set_option('deprecation.showfileUploaderEncoding',False)
 @st.cache(allow_output_mutation=True)
 def load_model1():
-    model = load_model('C:/Users/Dev-Laptop/Desktop/Project_Lung_cancer/best_model_1.hdf5')
+    model = load_model('best_model_1.hdf5')
     return model
-model=load_model1()
+with st.spinner("Loading the Model....."):
+    model=load_model1()
 st.write("""
         # Lung Cancer Detection
          """)
